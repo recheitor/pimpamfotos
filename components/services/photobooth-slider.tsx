@@ -122,7 +122,7 @@ export default function PhotoboothSlider({ lang }: PhotoboothSliderProps) {
     <section className="py-16 bg-muted">
       <div className="md:px-0 px-4">
         <div className="container mx-auto">
-          <div className="flex flex-row items-center sm:flex-col">
+          <div className="flex flex-row items-center">
             <Button variant="ghost" size="icon" onClick={prevSlide} className="mr-4 sm:mr-0 sm:mb-4">
               <ChevronLeft className="h-8 w-8" />
             </Button>
