@@ -12,7 +12,7 @@ import Contact from "@/components/contact"
 export default function Home() {
   const [lang, setLang] = useState("es")
 
-  const handleLanguageChange = (newLang) => {
+  const handleLanguageChange = (newLang:string) => {
     setLang(newLang)
   }
 
