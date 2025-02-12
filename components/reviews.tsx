@@ -5,6 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
+interface ReviewsProps {
+  lang: "es" | "en"
+}
 const reviews = {
   es: [
     {
@@ -42,7 +45,7 @@ const reviews = {
   ],
 }
 
-export default function Reviews({ lang }) {
+export default function Reviews({ lang }:ReviewsProps) {
   const [currentReview, setCurrentReview] = useState(0)
   const currentReviews = reviews[lang]
 

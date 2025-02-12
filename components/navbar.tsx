@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
 
 import { useState } from "react"
@@ -8,7 +9,10 @@ import { Button } from "@/components/ui/button"
 import { Toggle } from "@/components/ui/toggle"
 import { useTheme } from "next-themes"
 
-export default function Navbar({ onLanguageChange }) {
+interface NavbarProps {
+  onLanguageChange: (newLang: "es" | "en") => void // Correct type for `onLanguageChange`
+}
+export default function Navbar({ onLanguageChange }:NavbarProps) {
   const [lang, setLang] = useState("es")
   const { theme, setTheme } = useTheme()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

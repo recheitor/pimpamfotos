@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface PropsSectionProps {
-  lang: string
+  lang: "es" | "en"
 }
 
 const props = [

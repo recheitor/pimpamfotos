@@ -5,6 +5,11 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+interface HeroProps {
+  lang: "es" | "en"
+  onContactClick: () => void
+}
+
 const slides = {
   es: [
     {
@@ -72,7 +77,7 @@ const slides = {
   ],
 }
 
-export default function Hero({ lang, onContactClick }) {
+export default function Hero({ lang, onContactClick }:HeroProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const currentSlides = slides[lang]
 

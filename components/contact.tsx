@@ -1,8 +1,10 @@
 import { Facebook, Instagram, Twitter } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-
-export default function Contact({ lang }) {
+interface ContactProps {
+  lang: string
+}
+export default function Contact({ lang }:ContactProps) {
   return (
     <footer id="contact" className="bg-gradient-to-r from-muted to-muted/50 py-16">
       <div className="container mx-auto">

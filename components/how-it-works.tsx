@@ -1,5 +1,7 @@
 import { Camera, Users, Tv, Printer } from "lucide-react"
-
+interface HowItWorksProps {
+  lang: "es" | "en"
+}
 const steps = {
   es: [
     {
@@ -48,7 +50,7 @@ const steps = {
   ],
 }
 
-export default function HowItWorks({ lang }) {
+export default function HowItWorks({ lang }:HowItWorksProps) {
   const currentSteps = steps[lang]
 
   return (

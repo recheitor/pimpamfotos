@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { SetStateAction, useState } from "react"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import InfoSection from "@/components/info-section"
@@ -9,10 +9,11 @@ import Pricing from "@/components/pricing"
 import Reviews from "@/components/reviews"
 import Contact from "@/components/contact"
 
-export default function Home() {
-  const [lang, setLang] = useState("es")
 
-  const handleLanguageChange = (newLang:string) => {
+export default function Home() {
+  const [lang, setLang] = useState<"es" | "en">("es")
+
+  const handleLanguageChange = (newLang:SetStateAction<"es" | "en">) => {
     setLang(newLang)
   }
 

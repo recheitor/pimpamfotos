@@ -13,7 +13,7 @@ import PhotocallsSection from "@/components/services/photocalls-section"
 import Contact from "@/components/contact"
 
 export default function ServicesPage() {
-  const [lang, setLang] = useState("es")
+  const [lang, setLang] = useState<string>("es")
 
   const handleLanguageChange = (newLang: string) => {
     setLang(newLang)

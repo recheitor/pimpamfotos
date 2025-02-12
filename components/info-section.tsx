@@ -1,4 +1,8 @@
-export default function InfoSection({ lang }) {
+interface InfoProps {
+  lang: "es" | "en"
+}
+
+export default function InfoSection({ lang }:InfoProps) {
   return (
     <section id="services" className="py-16 bg-gradient-to-r from-muted to-muted/50">
       <div className="container mx-auto text-center">

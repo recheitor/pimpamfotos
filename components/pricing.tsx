@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
+interface PricingProps {
+  lang: "es" | "en"
+}
 const pricingPlans = {
   es: [
     {
@@ -37,7 +40,7 @@ const pricingPlans = {
   ],
 };
 
-export default function Pricing({ lang }) {
+export default function Pricing({ lang }:PricingProps) {
   const currentPlans = pricingPlans[lang]
 
   return (
