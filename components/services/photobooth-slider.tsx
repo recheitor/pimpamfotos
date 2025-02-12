@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
-
 import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
