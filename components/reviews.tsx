@@ -59,41 +59,43 @@ export default function Reviews({ lang }:ReviewsProps) {
 
   return (
     <section className="py-16 bg-gradient-to-r from-background to-muted">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-          {lang === "es" ? "Lo que dicen nuestros clientes" : "What our clients say"}
-        </h2>
-        <div className="relative overflow-hidden">
-          <div
-            className="flex transition-transform duration-500 ease-in-out text-center"
-            style={{ transform: `translateX(-${currentReview * 100}%)` }}
-          >
-            {currentReviews.map((review, index) => (
-              <Card key={index} className="w-full flex-shrink-0">
-                <CardContent className="pt-6">
-                  <p className="text-lg mb-4">{review.text}</p>
-                  <p className="font-semibold">{review.name}</p>
-                  <p className="text-sm text-muted-foreground">{review.date}</p>
-                </CardContent>
-              </Card>
-            ))}
+      <div className="md:px-0 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary">
+            {lang === "es" ? "Lo que dicen nuestros clientes" : "What our clients say"}
+          </h2>
+          <div className="relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out text-center"
+              style={{ transform: `translateX(-${currentReview * 100}%)` }}
+            >
+              {currentReviews.map((review, index) => (
+                <Card key={index} className="w-full flex-shrink-0">
+                  <CardContent className="pt-6">
+                    <p className="text-lg mb-4">{review.text}</p>
+                    <p className="font-semibold">{review.name}</p>
+                    <p className="text-sm text-muted-foreground">{review.date}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2"
+              onClick={prevReview}
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2"
+              onClick={nextReview}
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
           </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute left-0 top-1/2 transform -translate-y-1/2"
-            onClick={prevReview}
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-0 top-1/2 transform -translate-y-1/2"
-            onClick={nextReview}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
         </div>
       </div>
     </section>

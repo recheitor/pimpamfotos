@@ -147,29 +147,31 @@ export default function PhotoboothSlider({ lang }: PhotoboothSliderProps) {
 
   return (
     <section className="py-16 bg-muted">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center sm:flex-row">
-          <Button variant="ghost" size="icon" onClick={prevSlide} className="mr-4">
-            <ChevronLeft className="h-8 w-8" />
-          </Button>
-          <div className="flex-1 flex flex-col sm:flex-row items-center">
-            <div className="w-full sm:w-1/3 flex justify-center">
-              <Image
-                src={currentSlides[currentSlide].image || "/placeholder.svg"}
-                alt={currentSlides[currentSlide].title}
-                width={400}
-                height={600}
-                className="rounded-lg shadow-lg"
-              />
+    <div className="md:px-0 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col items-center sm:flex-row">
+            <Button variant="ghost" size="icon" onClick={prevSlide} className="mr-4">
+              <ChevronLeft className="h-8 w-8" />
+            </Button>
+            <div className="flex-1 flex flex-col sm:flex-row items-center">
+              <div className="w-full sm:w-1/3 flex justify-center">
+                <Image
+                  src={currentSlides[currentSlide].image || "/placeholder.svg"}
+                  alt={currentSlides[currentSlide].title}
+                  width={400}
+                  height={600}
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="w-full sm:w-2/3 pl-8 flex flex-col justify-center hidden sm:block">
+                <h2 className="text-3xl font-bold mb-4">{currentSlides[currentSlide].title}</h2>
+                <div className="text-sm">{currentSlides[currentSlide].description}</div>
+              </div>
             </div>
-            <div className="w-full sm:w-2/3 pl-8 flex flex-col justify-center hidden sm:block">
-              <h2 className="text-3xl font-bold mb-4">{currentSlides[currentSlide].title}</h2>
-              <div className="text-sm">{currentSlides[currentSlide].description}</div>
-            </div>
+            <Button variant="ghost" size="icon" onClick={nextSlide} className="ml-4">
+              <ChevronRight className="h-8 w-8" />
+            </Button>
           </div>
-          <Button variant="ghost" size="icon" onClick={nextSlide} className="ml-4">
-            <ChevronRight className="h-8 w-8" />
-          </Button>
         </div>
       </div>
     </section>
