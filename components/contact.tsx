@@ -1,10 +1,12 @@
-import { Facebook, Instagram, Twitter } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa"; // Import icons from react-icons
+import Image from "next/image";
+import Link from "next/link";
+
 interface ContactProps {
-  lang: string
+  lang: string;
 }
-export default function Contact({ lang }:ContactProps) {
+
+export default function Contact({ lang }: ContactProps) {
   return (
     <footer id="contact" className="bg-gradient-to-r from-muted to-muted/50 py-16">
       <div className="md:px-0 px-4">
@@ -17,17 +19,22 @@ export default function Contact({ lang }:ContactProps) {
               <p>Calle Guillem de Castro 106 bajo</p>
               <p>46003 Valencia</p>
               <p>
-                <a href="tel:963235533" className="hover:text-primary transition-colors">
-                  963235533
+                <a href="tel:644245533" className="hover:text-primary transition-colors">
+                  644 24 55 33
+                </a>
+                {/* WhatsApp icon */}
+                <a
+                  href="https://wa.me/644245533" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-foreground hover:text-primary transition-colors"
+                >
+                  <FaWhatsapp className="h-6 w-6 inline-block" />
+                  <span className="sr-only">WhatsApp</span>
                 </a>
               </p>
               <p>
-                <a href="tel:661348003" className="hover:text-primary transition-colors">
-                  661348003
-                </a>
-              </p>
-              <p>
-                <a href="mailto:info@pimpamfotos.com" className="hover:text-primary transition-colors">
+              <a href="mailto:info@pimpamfotos.com" className="hover:text-primary transition-colors">
                   info@pimpamfotos.com
                 </a>
               </p>
@@ -40,7 +47,7 @@ export default function Contact({ lang }:ContactProps) {
                 className="block w-full h-64 rounded-lg overflow-hidden relative"
               >
                 <Image
-                  src="/maps.png" // Replace with your actual image path
+                  src="/maps.png" 
                   alt="Map location"
                   fill
                   className="object-cover"
@@ -49,21 +56,24 @@ export default function Contact({ lang }:ContactProps) {
             </div>
           </div>
           <div className="flex justify-center space-x-4 mt-8">
+            {/* Instagram icon */}
             <a href="https://instagram.com/pimpamfotos/" className="text-foreground hover:text-primary">
-              <Instagram className="h-6 w-6" />
+              <FaInstagram className="h-6 w-6" />
               <span className="sr-only">Instagram</span>
             </a>
+            {/* Facebook icon */}
             <a href="https://www.facebook.com/PIM-PAM-FOTOS-316237731898641" className="text-foreground hover:text-primary">
-              <Facebook className="h-6 w-6" />
+              <FaFacebook className="h-6 w-6" />
               <span className="sr-only">Facebook</span>
             </a>
+            {/* Twitter icon */}
             <a href="https://twitter.com/pimpamfotos" className="text-foreground hover:text-primary">
-              <Twitter className="h-6 w-6" />
+              <FaTwitter className="h-6 w-6" />
               <span className="sr-only">Twitter</span>
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

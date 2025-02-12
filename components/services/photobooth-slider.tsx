@@ -44,34 +44,7 @@ const slides = {
           <p>Las características en cuanto a rendimiento y posibilidades de impresión y servicios es exactamente igual a la máquina blanca vinilable, sólo que con otro aspecto.</p>
         </>
       ),
-    },
-    {
-      image: "/fotomaton-madera-1-recortado.png",
-      title: "MÁQUINA MADERA VINTAGE",
-      description: (
-        <>
-          <p>Esta máquina, de fabricación propia, es nuestra máquina “vintage” con programa informático propio.</p>
-          <p>Características nuevas:</p>
-          <ul className="list-disc list-inside">
-            <li>Trípode con cámara y TV variables, haciendo la máquina más adaptable.</li>
-            <li>Reproducción en tiempo real en la TV de la imagen captada por la cámara.</li>
-            <li>Capacidad del carrete de impresión de hasta 700 impresiones.</li>
-            <li>Estética vintage.</li>
-            <li>Capacidad de realizar composición foto sin que sean fotos consecutivas.</li>
-            <li>Posibilidad de hacer zoom en las imágenes antes de imprimir.</li>
-            <li>Sistema con interfaz más ágil, recortando los tiempos de impresión.</li>
-            <li>Envío de fotografías por e-mail.</li>
-          </ul>
-          <p>Características que la diferencian de las demás:</p>
-          <ul className="list-disc list-inside">
-            <li>Impresión en formato tiras (en proceso de modificación).</li>
-            <li>Disparo múltiple.</li>
-            <li>Impresión de fotografías en tonos sepia y B/N.</li>
-            <li>Capacidad de personalizar el aspecto de la máquina.</li>
-          </ul>
-        </>
-      ),
-    },
+    }
   ],
   en: [
     {
@@ -147,20 +120,20 @@ export default function PhotoboothSlider({ lang }: PhotoboothSliderProps) {
 
   return (
     <section className="py-16 bg-muted">
-    <div className="md:px-0 px-4">
+      <div className="md:px-0 px-4">
         <div className="container mx-auto">
-          <div className="flex flex-col items-center sm:flex-row">
-            <Button variant="ghost" size="icon" onClick={prevSlide} className="mr-4">
+          <div className="flex flex-row items-center sm:flex-col">
+            <Button variant="ghost" size="icon" onClick={prevSlide} className="mr-4 sm:mr-0 sm:mb-4">
               <ChevronLeft className="h-8 w-8" />
             </Button>
             <div className="flex-1 flex flex-col sm:flex-row items-center">
-              <div className="w-full sm:w-1/3 flex justify-center">
+              <div className="w-full sm:w-1/2 flex justify-center h-[500px]"> {/* Fixed height */}
                 <Image
                   src={currentSlides[currentSlide].image || "/placeholder.svg"}
                   alt={currentSlides[currentSlide].title}
                   width={400}
                   height={600}
-                  className="rounded-lg shadow-lg"
+                  className="rounded-lg shadow-lg object-cover w-full h-full" // Ensure image fills the container
                 />
               </div>
               <div className="w-full sm:w-2/3 pl-8 flex flex-col justify-center hidden sm:block">
@@ -168,7 +141,7 @@ export default function PhotoboothSlider({ lang }: PhotoboothSliderProps) {
                 <div className="text-sm">{currentSlides[currentSlide].description}</div>
               </div>
             </div>
-            <Button variant="ghost" size="icon" onClick={nextSlide} className="ml-4">
+            <Button variant="ghost" size="icon" onClick={nextSlide} className="ml-4 sm:ml-0 sm:mt-4">
               <ChevronRight className="h-8 w-8" />
             </Button>
           </div>
