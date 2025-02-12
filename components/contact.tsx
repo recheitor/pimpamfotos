@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa"; // Import icons from react-icons
+import { FaWhatsapp } from "react-icons/fa"
 import Image from "next/image";
 import Link from "next/link";
 
