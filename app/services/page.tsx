@@ -13,9 +13,9 @@ import PhotocallsSection from "@/components/services/photocalls-section"
 import Contact from "@/components/contact"
 
 export default function ServicesPage() {
-  const [lang, setLang] = useState<string>("es")
+  const [lang, setLang] = useState<"es" | "en">("es")
 
-  const handleLanguageChange = (newLang: string) => {
+  const handleLanguageChange = (newLang: "es" | "en") => {
     setLang(newLang)
   }
 
