@@ -56,21 +56,7 @@ export default function Contact({ lang }: ContactProps) {
             </div>
           </div>
           <div className="flex justify-center space-x-4 mt-8">
-            {/* Instagram icon */}
-            <a href="https://instagram.com/pimpamfotos/" className="text-foreground hover:text-primary">
-              <FaInstagram className="h-6 w-6" />
-              <span className="sr-only">Instagram</span>
-            </a>
-            {/* Facebook icon */}
-            <a href="https://www.facebook.com/PIM-PAM-FOTOS-316237731898641" className="text-foreground hover:text-primary">
-              <FaFacebook className="h-6 w-6" />
-              <span className="sr-only">Facebook</span>
-            </a>
-            {/* Twitter icon */}
-            <a href="https://twitter.com/pimpamfotos" className="text-foreground hover:text-primary">
-              <FaTwitter className="h-6 w-6" />
-              <span className="sr-only">Twitter</span>
-            </a>
+            <h6>2025 Pim Pam Fotos ©</h6>
           </div>
         </div>
       </div>
