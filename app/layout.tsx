@@ -1,9 +1,15 @@
-import { Inter } from "next/font/google"
+import { Afacad } from "next/font/google" // Correct import for Afacad
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 import type React from "react" // Added import for React
 
-const inter = Inter({ subsets: ["latin"] })
+// Configure the Afacad font with the desired variant (e.g., "flux")
+const afacad = Afacad({
+  subsets: ["latin"], // Specify the subsets you need
+  weight: "400", // Specify the font weight (e.g., 400 for regular, 700 for bold)
+  style: "normal", // Specify the font style (e.g., normal, italic)
+  variable: "--font-afacad", // Optional: Define a CSS variable for the font
+})
 
 export const metadata = {
   title: "Pim Pam Fotos - Fotografía de Bodas y Eventos",
@@ -21,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
-      <body className={inter.className}>
+    <html lang="es" className={afacad.className}> {/* Apply the font class */}
+      <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
@@ -30,7 +36,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'

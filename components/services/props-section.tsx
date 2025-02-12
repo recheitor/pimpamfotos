@@ -12,19 +12,19 @@ interface PropsSectionProps {
 const props = [
   {
     image: "/carteles-scaled.jpg",
-    title: { es: "Sombreros", en: "Hats" },
+    title: { es: "Varios", en: "Various" },
   },
   {
     image: "/rockero-scaled.jpg",
-    title: { es: "Gafas", en: "Glasses" },
+    title: { es: "Guitarras", en: "Guitars" },
   },
   {
     image: "/tropical-scaled.jpg",
-    title: { es: "Bocadillos", en: "Speech Bubbles" },
+    title: { es: "Cabeza", en: "Head" },
   },
   {
     image: "/variado-1-scaled.jpg",
-    title: { es: "Máscaras", en: "Masks" },
+    title: { es: "Sombreros", en: "Hats" },
   },
 ]
 
@@ -45,7 +45,7 @@ export default function PropsSection({ lang }: PropsSectionProps) {
         <h2 className="text-3xl font-bold text-center mb-4">
           {lang === "es" ? "NUESTRO ATREZZO" : "OUR PROPS"}
         </h2>
-        <p className="text-center mb-8">
+        <p className="text-center mb-8 me-2 ms-2">
           {lang === "es"
             ? "Tenemos muchos objetos decorativos, sombreros, gafas, bocadillos photocall, etc... ¡echa un vistazo!"
             : "We have many decorative objects, hats, glasses, photocall speech bubbles, etc... take a look!"}

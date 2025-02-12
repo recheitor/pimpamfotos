@@ -93,7 +93,7 @@ export default function Navbar({ onLanguageChange }:NavbarProps) {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-sm">
+        <div className="md:hidden ">
           <div className="container mx-auto flex flex-col items-center space-y-4 py-4 px-4 text-center">
             <Link
               href="/"
