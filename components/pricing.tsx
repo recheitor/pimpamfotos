@@ -7,34 +7,34 @@ const pricingPlans = {
   es: [
     {
       name: "Básico",
-      price: "€330 + IVA",
+      price: "350 + IVA",
       features: ["2 horas de cobertura", "Fotos e impresiones ilimitadas", "Operario todo el evento"],
     },
     {
       name: "Estándar",
-      price: "€440 + IVA",
+      price: "460 + IVA",
       features: ["3 horas de cobertura", "Fotos e impresiones ilimitadas", "Operario todo el evento", "Álbum incluido", "USB incluido"],
     },
     {
       name: "Profesional",
-      price: "€500 + IVA",
+      price: "525 + IVA",
       features: ["4 horas de cobertura", "Fotos e impresiones ilimitadas", "Operario todo el evento", "Álbum incluido", "USB incluido"],
     },
   ],
   en: [
     {
       name: "Basic",
-      price: "€330 + VAT",
+      price: "350 + VAT",
       features: ["2 hours of coverage", "Unlimited photos and prints", "Attendant throughout the event"],
     },
     {
       name: "Standard",
-      price: "€440 + VAT",
+      price: "€460 + VAT",
       features: ["3 hours of coverage", "Unlimited photos and prints", "Attendant throughout the event", "Album included", "USB included"],
     },
     {
       name: "Professional",
-      price: "€500 + VAT",
+      price: "€525 + VAT",
       features: ["4 hours of coverage", "Unlimited photos and prints", "Attendant throughout the event", "Album included", "USB included"],
     },
   ],
