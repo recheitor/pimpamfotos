@@ -19,18 +19,23 @@ export default function Contact({ lang }: ContactProps) {
               <p>Calle Guillem de Castro 106 bajo</p>
               <p>46003 Valencia</p>
               <p>
-                <a href="tel:644245533" className="hover:text-primary transition-colors">
-                  644 24 55 33
+                <a href="tel:+34655123875" className="hover:text-primary transition-colors">
+                  655 12 38 75
                 </a>
                 {/* WhatsApp icon */}
                 <a
-                  href="https://wa.me/644245533" 
+                  href="https://wa.me/34655123875"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-2 text-foreground hover:text-primary transition-colors"
                 >
                   <FaWhatsapp className="h-6 w-6 inline-block" />
                   <span className="sr-only">WhatsApp</span>
+                </a>
+              </p>
+              <p>
+                <a href="tel:+34644245533" className="hover:text-primary transition-colors">
+                  644 24 55 33
                 </a>
               </p>
               <p>
