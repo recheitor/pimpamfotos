@@ -61,7 +61,7 @@ export default function Contact({ lang }: ContactProps) {
             </div>
           </div>
           <div className="flex justify-center space-x-4 mt-8">
-            <h6>2025 Pim Pam Fotos ©</h6>
+            <h6>2026 Pim Pam Fotos ©</h6>
           </div>
         </div>
       </div>
